@@ -127,4 +127,21 @@ def game_hash
   }
 end
 
+def all_players
+  home_players=game_hash[:home][:players]
+  away_players=game_hash[:away][:players]
+  homr_players + away_players
+end
+
+def find_players(player_name)
+  some_player=all_players.find do |player|
+    player[:player_name]==player_name
+  end
+  return some_player
+end
+
+def num_points_scored(player_name)
+  find_players(player_name)[:points]
+end
+
 # Write code here
