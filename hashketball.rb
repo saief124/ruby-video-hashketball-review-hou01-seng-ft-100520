@@ -144,4 +144,15 @@ def num_points_scored(player_name)
   find_players(player_name)[:points]
 end
 
+def shoe_size(player_name)
+  find_players(player_name)[:shoe]
+end
+
+def team_colors(team_name)
+  game_hash.each do |l,h|
+    if h[:team_name]=team_name
+      return h[:colors]
+    end
+  end
+
 # Write code here
