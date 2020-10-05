@@ -154,5 +154,6 @@ def team_colors(team_name)
       return h[:colors]
     end
   end
+end
 
 # Write code here
