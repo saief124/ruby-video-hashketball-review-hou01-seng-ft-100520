@@ -148,7 +148,14 @@ def shoe_size(player_name)
   find_players(player_name)[:shoe]
 end
 
-def team_colors(team_name)
+def all_colors
+  home_colors=game_hash[:home][:colors]
+  away_colors=game_hash[:away][:colors]
+  home_colors + away_colors
+end
+def  team_colors(team_name)
+
+end
   game_hash.each do |l,h|
     if h[:team_name]=team_name
       return h[:colors]
